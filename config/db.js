@@ -7,7 +7,7 @@ const connectDB = async ()=>{
 try {
 // Waits for a promise to connect to Mongo DB 
 await mongoose.connect(db, {useNewUrlParser:true} )
-//{useNewUrlParser:true} is to prevent possible errors due to deprecation 
+//{useNewUrlParser:true}/creatIndex is to prevent possible errors due to deprecation 
 console.log('MongoDB Connected.....')
 
 }
