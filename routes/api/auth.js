@@ -64,13 +64,15 @@ const isMatch = await bcrypt.compare(password, user.password);
 if (!isMatch){return res.status(400).json({errors:[{msg:'Incorrect Password'}]}) }
 
 
-
+//Uses Jwt to find the storage key for the user 
 const payload ={
 
     user:{
         id:user.id
     }
 }
+
+// Calls jwt to sign in user and grab token(dummy data code) for user
 jwt.sign(payload,
      config.get('jwtSecret'),
      {expiresIn:360000},
@@ -80,7 +82,7 @@ jwt.sign(payload,
      }
      )
 
-
+//response with json message 
 res.json(token)
 }
 catch (err){
