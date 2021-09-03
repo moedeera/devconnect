@@ -19,7 +19,7 @@ company: {
   },
   status: {
     type: String,
-    required: true
+    required: false
   },
   skills: {
     type: [String],

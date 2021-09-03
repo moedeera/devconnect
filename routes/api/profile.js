@@ -80,10 +80,10 @@ await Profile.findOneAndUpdate({user:req.user.id},
     
     }
 else {
-console.log('profile no found')
+console.log('Creating')
 //Else Create Profile
 profile = await new Profile(profileFields)
-profile.save();
+await profile.save();
 return res.json(profile)
 
 }
@@ -164,6 +164,10 @@ res.send('hello')
 
 // })
 
+
+// @route POST API/profile
+// @desc Get All profiles
+// @access Private
 
 
 
