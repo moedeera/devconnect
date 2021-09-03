@@ -1,6 +1,9 @@
 {
 
 "mongoURI":"mongodb+srv://moedeera555:5555@cluster0.u8ft9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-"jwtSecret":"mysecrettoken"
+"jwtSecret":"mysecrettoken",
+"githubClientId":"1a53d18fadbd0332f072",
+"githubSecret":"d099643c8c70fed040c8e370b20b7a2e3124dc47",
+"githubToken": "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"
 
 }

@@ -73,11 +73,11 @@ education: [
       },
       fieldofstudy: {
         type: String,
-        required: true
+        required: false
       },
       from: {
         type: Date,
-        required: true
+        required: false
       },
       to: {
         type: Date

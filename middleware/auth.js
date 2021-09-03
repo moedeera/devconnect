@@ -21,6 +21,7 @@ const decoded = jwt.verify(token, config.get('jwtSecret'))
 req.user = decoded.user;
 // move on once everything is good
 next();
+console.log(req.user)
 
 }
 // if not verified 
