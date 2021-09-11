@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import axios from 'axios';
 
- const TestRegister = () => {
+ const Register = () => {
 
 const [formData, setFormData] = useState({
 
@@ -109,4 +109,4 @@ try {
     )
 }
 
-export default TestRegister
+export default Register

@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import axios from 'axios';
 
- const Register = () => {
+ const Register2 = () => {
 
 const [formData, setFormData] = useState({
 
@@ -83,7 +83,7 @@ else {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input type="submit" className="btn btn-primary" value="Register2" />
       </form>
       <p className="my-1">
         Already have an account? <a href="login.html">Sign In</a>
@@ -94,4 +94,4 @@ else {
     )
 }
 
-export default Register
+export default Register2
