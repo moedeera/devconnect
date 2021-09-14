@@ -7,7 +7,7 @@ import Login from './components/auth/Login';
 //Redux
 import {Provider} from 'react-redux'
 
-// import store from './store';
+import store from './store';
 
 import './App.css';
 
@@ -15,27 +15,18 @@ import './App.css';
 function App() {
   return (
     
-    <Router>
-   <Fragment>
-         <Navbar />
-         <Route exact path="/" component={Landing} />
-      <section className ="container">               
-         <Switch>
-           
+    <Provider store={store}>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-                   
-            
-      
           </Switch>
-         </section>         
-                
-
-
-
-
-   </Fragment>
-   </Router>
+        </Fragment>
+      </Router>
+    </Provider>
   );
 
 }
