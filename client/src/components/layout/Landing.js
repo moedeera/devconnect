@@ -10,7 +10,7 @@ export const Landing = () => {
         <div className="landing-inner">
           <h1 className="x-large"><i class="fas fa-share-alt-square"></i>GameSpace </h1>
           <p className="lead">
-          Connect with loved ones by playing fun games
+          Connect with others by playing fun games
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">Sign Up</Link>
