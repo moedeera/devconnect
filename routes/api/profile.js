@@ -175,11 +175,24 @@ res.send('hello')
 
 router.get('/', async (req,res)=>{
 
+
+
+
 try {
+// if (){}
 
     const profiles = await Profile.find().populate('user',['name', 'avatar'])
     res.json(profiles)
-    
+//     else{
+
+//  res.send('unauthorized user')
+
+//     } 
+
+
+
+
+
 } catch (err) {
     
 

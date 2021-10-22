@@ -1,7 +1,9 @@
 import React, {Fragment, useState} from 'react'
+import {connect } from 'react-redux';
 import axios from 'axios';
+import { setAlert } from '../../actions/alert';
 
- const Register = () => {
+ const Register = (props) => {
 
 const [formData, setFormData] = useState({
 
@@ -19,7 +21,7 @@ setFormData({...formData, [e.target.name]:e.target.value})
 const onSubmit = async e => {
 e.preventDefault();
 if (password !== password2){
-
+props.setAlert('Password do not match', 'danger')
     console.log('passwords do not match')
 } else {
 
@@ -106,7 +108,12 @@ try {
     </section>
             </Fragment>
         </div>
-    )
-}
+    );
+};
 
-export default Register
+
+
+
+
+
+export default connect(null, setAlert) (Register);
