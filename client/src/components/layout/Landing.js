@@ -8,7 +8,7 @@ export const Landing = () => {
 <section className="landing">
       <div classNameName="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large"><i class="fas fa-share-alt-square"></i>GameSpace </h1>
+          <h1 className="x-large"><i class="fas fa-share-alt-square"></i>GameSpace 2 </h1>
           <p className="lead">
           Connect with others by playing fun games
           </p>
