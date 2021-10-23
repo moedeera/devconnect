@@ -6,7 +6,7 @@ export const Navbar = () => {
     return (
         <div>
 
-<nav className="navbar bg-dark">
+<nav className="navbar">
       <h1>
         <Link to ='/'>
         <i class="fas fa-share-alt-square"></i> Gamespace
@@ -14,7 +14,7 @@ export const Navbar = () => {
       </h1>
       <ul>
      
-        <li><Link to ="/register">Register</Link></li>
+        
         <li><Link to ="/login">Login</Link></li>
       </ul>
     </nav>
