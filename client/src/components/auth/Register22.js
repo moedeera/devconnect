@@ -1,7 +1,9 @@
 import React, {Fragment, useState} from 'react'
+import {connect } from 'react-redux';
 import axios from 'axios';
+import { setAlert } from '../../actions/alert';
 
- const Register2 = () => {
+ const Register = (props) => {
 
 const [formData, setFormData] = useState({
 
@@ -19,12 +21,27 @@ setFormData({...formData, [e.target.name]:e.target.value})
 const onSubmit = async e => {
 e.preventDefault();
 if (password !== password2){
-
+props.setAlert('Password do not match', 'danger')
     console.log('passwords do not match')
-} 
-else {
+} else {
 
-    console.log('success')
+const newUser = {
+name,
+email,
+password
+}
+try {
+    const config = {
+        headers:{
+            'Content-Type':'application/json'
+             } }
+ const body = JSON.stringify(newUser)
+ const res = await axios.post('/api/users',body, config)             
+    console.log(res.data)
+} catch (err) {
+    console.error(err.response.data)
+}
+
 }
 }
 
@@ -83,7 +100,7 @@ else {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register2" />
+        <input type="submit" className="btn btn-primary" value="Register" />
       </form>
       <p className="my-1">
         Already have an account? <a href="login.html">Sign In</a>
@@ -91,7 +108,12 @@ else {
     </section>
             </Fragment>
         </div>
-    )
-}
+    );
+};
 
-export default Register2
+
+
+
+
+
+export default connect(null, setAlert) (Register);
