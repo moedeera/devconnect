@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import axios from 'axios';
 
- const Register = () => {
+ const Register2 = () => {
 
 const [formData, setFormData] = useState({
 
@@ -21,25 +21,10 @@ e.preventDefault();
 if (password !== password2){
 
     console.log('passwords do not match')
-} else {
+} 
+else {
 
-const newUser = {
-name,
-email,
-password
-}
-try {
-    const config = {
-        headers:{
-            'Content-Type':'application/json'
-             } }
- const body = JSON.stringify(newUser)
- const res = await axios.post('/api/users',body, config)             
-    console.log(res.data)
-} catch (err) {
-    console.error(err.response.data)
-}
-
+    console.log('success')
 }
 }
 
@@ -47,11 +32,12 @@ try {
 
 
     return (
-        <div>
-            <Fragment>
+        <div className = "Landing" >
+            <Fragment className="sec1">
  
-    <section className="container">
-      <h1 className="large text-primary">Sign Up</h1>
+    <section className="Reg" >
+
+      <h1>Sign Up</h1>
       <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
       <form className="form" onSubmit = {e=>onSubmit(e)}>
         <div className="form-group">
@@ -72,11 +58,7 @@ try {
           onChange = {e =>onChange(e)}
            
            />
-          <small className="form-text"
-      
-            >This site uses Gravatar so if you want a profile image, use a
-            Gravatar email</small
-          >
+         
         </div>
         <div className="form-group">
           <input
@@ -98,15 +80,16 @@ try {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
-      </form>
-      <p className="my-1">
-        Already have an account? <a href="login.html">Sign In</a>
+        <input type="submit" className="btn" value="Register" />
+        <p >
+        Already have an account? <a href="Login">Sign In</a>
       </p>
+      </form>
+      
     </section>
             </Fragment>
         </div>
     )
 }
 
-export default Register
+export default Register2

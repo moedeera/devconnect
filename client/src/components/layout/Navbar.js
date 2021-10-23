@@ -6,16 +6,16 @@ export const Navbar = () => {
     return (
         <div>
 
-<nav className="navbar bg-dark">
-      <h1>
+<nav className="navbar">
+      <h1 className="header">
         <Link to ='/'>
-          <i className="fas fa-code"></i> DevConnector
+        <i class="fas fa-share-alt-square"></i> Gamespace
           </Link>
       </h1>
       <ul>
-        <li><Link to ="#!">Developers</Link></li>
-        <li><Link to ="/register">Register</Link></li>
-        <li><Link to ="/login">Login</Link></li>
+     
+        
+        <li><Link to ="Login">Login</Link></li>
       </ul>
     </nav>
 

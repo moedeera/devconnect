@@ -27,10 +27,10 @@ const Login = () => {
     
     
         return (
-            <div>
+            <div className ="Landing">
                 <Fragment>
      
-        <section className="container">
+        <section className="Reg">
           <h1 className="large text-primary">Sign in</h1>
           <p className="lead"><i className="fas fa-user"></i> Sign Your Account</p>
           <form className="form" onSubmit = {e=>onSubmit(e)}>

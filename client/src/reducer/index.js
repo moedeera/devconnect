@@ -1,9 +1,15 @@
-// import React from 'react'
-// import thunk from 'redux thunk'
-// import {combineReducers} from 'redux';
+import React from 'react'
+import alert from './alert';
+import thunk from 'redux-thunk'
+import {combineReducers} from 'redux';
 
 
 
 
 
-// export default combineReducers ({});
+export default combineReducers ({
+alert
+
+
+
+});
