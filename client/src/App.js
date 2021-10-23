@@ -14,7 +14,7 @@ import './App.css';
 
 function App() {
   return (
-    <Provider store="store">
+    
     <Router>
    <Fragment>
          <Navbar />
@@ -36,7 +36,7 @@ function App() {
 
    </Fragment>
    </Router>
-   </Provider>
+   
   );
 
 }
